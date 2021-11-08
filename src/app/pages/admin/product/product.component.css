@@ -1,0 +1,26 @@
+form{
+    margin: auto;
+}
+.mat-form-field, label{
+    width: 100%;
+    font-size: 20px;
+}
+button{
+    color: white;
+    font-size: 20px;
+    border: none;
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+.imageInput{
+    font-size: 20px;
+}
+.productImage{
+    width: 100px;
+    height: 100px;
+}
+button:hover{
+    border: 2px solid var(--secondary-color);
+    background-color: none;
+}

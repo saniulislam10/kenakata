@@ -1,0 +1,40 @@
+<form [formGroup]="dataForm" (ngSubmit)="onSubmitForm()" autocomplete="off">
+    <div>
+        <label for="image">Product Image : </label>
+        <input class="imageInput" type="file" name="image" (change)="fileChangeEvent($event)" accept="image/*">
+        <img class="productImage" [src]="imgPlaceHolder" />
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label for="name">Name </mat-label>
+            <input type="text" formControlName="name" name="name" matInput placeholder="Enter Product Name">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label for="slug">Slug</mat-label>
+            <input [readonly]="autoSlug" type="text" formControlName="slug" name="slug" matInput placeholder="Enter Product Slug">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label for="price">Price</mat-label>
+            <input type="number" formControlName="price" name="price" matInput placeholder="Product Price">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label for="category">Category</mat-label>
+            <input type="text" formControlName="category" name="category" matInput placeholder="Product category">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label for="brand">Brand</mat-label>
+            <input type="text" formControlName="brand" name="brand" matInput placeholder="Product brand">
+        </mat-form-field>
+    </div>
+    <div>
+    </div>
+    <button class="submit" type="submit">Submit</button>
+</form>

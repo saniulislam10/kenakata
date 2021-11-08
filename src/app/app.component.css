@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Ubuntu', sans-serif;
+    --bg-color: #F2F2F2;
+    --primary-color: #004516;
+    --secondary-color: #ff9100;
+}
+
+.gap{
+    padding-top: 190px;
+    display: block;
+    margin: auto;
+    width: 80%;
+}

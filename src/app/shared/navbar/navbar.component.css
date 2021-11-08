@@ -1,0 +1,344 @@
+
+.max-width{
+    width: 60%;
+    margin: auto;
+}
+.header{
+    display: flex;
+}
+
+
+
+/* bar Styling */
+
+.bar{
+    height: 40px;
+    display: block;
+    position: fixed;
+    width: 100%;
+}
+
+.social-icon-bar{
+    margin-top: 10px;
+    margin-right: 10%;
+}
+.bar .social-icon-bar i{
+    float: right;
+    padding-right: 20px;
+}
+.bar .social-icon-bar a{
+    color: #111;
+}
+.bar .social-icon-bar a:hover{
+    color: blue;
+}
+
+/* Logo */
+.max-width .logo{
+    height: max-content;
+    width: max-content;
+    margin-top: 38px;
+}
+.max-width .logo img{
+    display: block;
+    position: relative;
+    height: 120px;
+    width: auto;
+}
+
+/* Search */
+.search-box{
+    width: 100%;
+    height: 80px;
+}
+.search{
+    border: 1px solid black;
+    padding-left: 25px;
+    background:white;
+    width: 80%;
+    height: 55px;
+    margin-left: 25px;
+    margin-top: 60px;
+    margin-right: 0px;
+    font-size: 20px;
+}
+
+/* Account */
+.login a {
+    position: absolute;
+    right: 10%;
+    top: 99px;
+    font-size: 26px;
+    text-decoration: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3 all ease-in-out;
+}
+.login a:hover {
+    color: var(--secondary-color);
+}
+
+/* navbar styling */
+.navbar{
+    top: 170px;
+    height: 123px;
+    display: block;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    background: #111;
+    
+}
+.navbar .menu{
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.navbar .menu ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 25px;
+}
+.navbar .menu ul li a{
+    text-align: center;
+    color : white;
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-weight: 300;
+}
+.navbar .menu ul li a:hover{
+    color: var(--secondary-color);
+}
+
+
+.main{
+    margin: 5%;
+}
+
+
+/* Card */
+
+.card{
+    font-family: var(--primary-font);
+    position: relative;
+    width:calc(20% - 20px);
+    padding-bottom: 20px;
+    background: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.card a{
+    color: white;
+    text-decoration: none;
+}
+.card .image:hover img{
+    transform: scale(1.1);
+}
+.card .image{
+    width: 100%;
+    overflow: hidden;
+}
+.card .image img{
+    width: 100%;
+    height: auto;
+    mask-image: inherit;
+    background: white;
+}
+.card .title{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 5px;
+}
+.card .price{
+    display: flex;
+    justify-content: space-between;
+}
+.card .add{
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    font-size: 20px;
+    text-align: left;
+    align-items: center;
+}
+
+.card .more{
+    padding-top: 4px;
+    padding-right: 15px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 600;
+}
+.card .more i{
+    font-size: 18px;
+    font-weight: 600;
+}
+.card .more:hover{
+    color: var(--secondary-color);
+}
+
+.card i:hover{
+    transform: scale(1.05);
+}
+
+/* Banner Section */
+#banner img{
+    display: block;
+    position: relative;
+    width: 58%;
+    height: auto;
+    top: 200px;
+    margin: auto;
+}
+
+/* Products Section */
+#newProducts{
+    margin-top: 50px;
+}
+
+section .titleText{
+    font-family: var(--primary-font);
+    margin: auto;
+    max-width: 57.5%;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+section .max-width{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#products{
+    margin-top: 50px;
+}
+
+/* Feature Section */
+
+#features{
+    margin-top: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#features .feature{
+    margin-right: 10px;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--primary-color);
+}
+
+/* Campaign section */
+
+#campaign{
+    width: 58%;
+    height: 100px;
+    margin: auto;
+    margin-top: 30px;
+    border: 2px solid var(--primary-color);
+}
+/* Category section */
+
+#category{
+    width: 58%;
+    height: 250px;
+    margin: auto;
+    margin-top: 30px;
+    border: 2px solid var(--primary-color);
+}
+
+/* Footer Section */
+footer{
+    padding: 20px;
+    color: #fff;
+    background: #111;
+}
+footer a{
+    color: #fff;
+    background: #111;
+}
+footer a:hover{
+    color: yellowgreen;
+}
+
+
+/* none */
+.active{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1800px) {
+    .navbar .menu{
+        width: 80%;
+    }
+}
+@media screen and (max-width:1350px) {
+    .navbar .menu ul li{
+        font-size: 20px;
+    }
+    .search{
+        width: 60%;
+    }
+}
+@media screen and (max-width:1140px) {
+    .navbar .menu{
+        width: 90%;
+    }
+    .navbar .menu ul li{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:1014px) {
+    /* Need Hamburger Menu */
+    .navbar .menu{
+        width: 100%;
+    }
+    .active{
+        display: none;
+    }
+    .search{
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+
+
