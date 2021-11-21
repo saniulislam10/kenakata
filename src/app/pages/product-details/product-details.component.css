@@ -1,0 +1,25 @@
+.gap{
+    padding-top: 190px;
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+.container{
+    display: flex;
+}
+h2{
+    font-size: 35px;
+}
+h3{
+    font-size: 20px;
+}
+img{
+    height: 400px;
+}
+button{
+    background-color: #004516;
+    color: white;
+    margin-right: 5px;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+}

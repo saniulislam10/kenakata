@@ -22,6 +22,8 @@ import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatTableModule } from '@angular/material/table'  
 
 
 const materials = [
@@ -46,6 +48,8 @@ const materials = [
   MatRippleModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatTreeModule,
+  MatTableModule,
   ReactiveFormsModule,
   OverlayModule
 ];

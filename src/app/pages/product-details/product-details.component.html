@@ -1,0 +1,18 @@
+    <div class="container">
+        <img class="image" mat-card-image src="{{product.imageLink}}" alt="Photo">
+        <div class="Text">
+            <h2 class="title">{{product.name}}</h2>
+            <h3 class="title">Brand : {{product.brand}}</h3>
+            <h3 class="title">Category : {{product.category}}</h3>
+            <p>Details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae at natus aliquam, dolore et
+                fugiat voluptates nam expedita pariatur reprehenderit iusto consectetur illum placeat quibusdam sint
+                mollitia dolores vero! Unde, ipsa quam. Quam illo culpa vitae nemo molestiae eius sapiente.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur fugiat, excepturi ullam odit
+                cupiditate magnam. Minima, porro. Quidem sed ullam dolorem laborum expedita. Optio magni dignissimos
+                corrupti dolore nam vitae, accusamus deserunt ut iste porro, mollitia aliquam labore unde!
+            </p>
+            <h3>Price: {{product.price}} BDT</h3>
+            <button mat-button (click)="addToCart()" >Add to Cart</button>
+            <button mat-button>SHARE</button>
+        </div>
+    </div>

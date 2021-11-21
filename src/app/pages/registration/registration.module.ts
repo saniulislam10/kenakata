@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RegistrationRoutingModule } from './registration-routing.module';
 import { RegistrationComponent } from './registration.component';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { RegistrationComponent } from './registration.component';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     RegistrationRoutingModule
   ]
 })

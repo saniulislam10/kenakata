@@ -1,0 +1,14 @@
+.example-card {
+    max-width: 220px;
+    height: 400px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.example-card:hover{
+    transform: scale(110%);
+}
+a{
+    text-decoration: none;
+}

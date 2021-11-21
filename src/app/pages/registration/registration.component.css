@@ -1,0 +1,26 @@
+.example-form {
+    min-width: 150px;
+    max-width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+.width{
+    width: 200%;
+}
+
+button{
+    color: white;
+    font-size: 20px;
+    border: none;
+    background-color: #ff9100;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    cursor: pointer;
+}
+button:hover{
+    color: #ff9100;
+    border: 2px solid #ff9100;
+    background-color: white;
+}

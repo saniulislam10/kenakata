@@ -1,0 +1,11 @@
+<form class="example-form" [formGroup]="dataForm" (ngSubmit)="onSubmitForm()" autocomplete="off">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phone" type="tel">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>password</mat-label>
+        <input matInput formControlName="password" type="password">
+    </mat-form-field>
+    <button type="submit">Login</button>
+</form>

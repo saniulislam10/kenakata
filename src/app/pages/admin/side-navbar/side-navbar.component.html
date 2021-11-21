@@ -1,0 +1,36 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+      <!-- This is the tree node template for leaf nodes -->
+      <mat-tree-node routerLink="{{node.link}}" *matTreeNodeDef="let node" matTreeNodePadding>
+        <!-- use a disabled button to provide padding for tree leaf -->
+        <button mat-icon-button></button>
+        <a routerLink="{{node.link}}">
+          {{node.name}}
+        </a>
+      </mat-tree-node>
+      <!-- This is the tree node template for expandable nodes -->
+
+      <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+        <button mat-icon-button matTreeNodeToggle
+                [attr.aria-label]="'Toggle ' + node.name">
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+          </mat-icon>
+        </button>
+        <a routerLink="{{node.link}}">
+          {{node.name}}
+        </a>
+        
+      </mat-tree-node>
+    </mat-tree>
+  </mat-drawer>
+  <div class="example-sidenav-content">
+    <button type="button" class="toggle" mat-button (click)="drawer.toggle()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ng-content></ng-content>
+  </div>
+
+</mat-drawer-container>
+

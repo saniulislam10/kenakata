@@ -1,1 +1,52 @@
-<p>registration works!</p>
+<form class="example-form" [formGroup]="dataForm" (ngSubmit)="onSubmitForm()" autocomplete="off">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>First name</mat-label>
+                    <input matInput formControlName="firstName" type="text">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" type="text">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <mat-form-field class="width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email">
+            </mat-form-field>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+
+                    <mat-label>password</mat-label>
+                    <input matInput formControlName="password" type="password">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Confirm password</mat-label>
+                    <input matInput formControlName="confirmPassword" type="password">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <mat-form-field class="width" appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="tel" formControlName="phone" placeholder="01XX XXX XXX">
+            </mat-form-field>
+        </tr>
+        <tr>
+            <mat-form-field class="width" appearance="fill">
+                <mat-label>Address</mat-label>
+                <textarea matInput placeholder="Ex. 100 Main St" formControlName="address" rows="10"></textarea>
+            </mat-form-field>
+        </tr>
+    </table>
+    <button type="submit">Register</button>
+</form>

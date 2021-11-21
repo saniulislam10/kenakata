@@ -1,0 +1,73 @@
+<div class="container-fluid">
+
+    <div class="table-container">
+      <table>
+        <thead>
+        <tr class="table-head">
+          <th scope="col">{{'Name'}}</th>
+          <th scope="col">{{'Brand'}}</th>
+          <th scope="col">{{'Unit'}}</th>
+          <th scope="col">{{'Unit Price'}}</th>
+          <th scope="col">{{'Price'}}</th>
+          <th scope="col">{{'Action'}}</th>
+        </tr>
+        </thead> <!-- End Table Head -->
+        <tr
+          *ngFor="let data of carts | paginate: { itemsPerPage: 8, currentPage: currentPage}">
+          <td [attr.data-label]="'Name'">{{data?.product?.name}}</td>
+          <td [attr.data-label]="'Brand'">৳ {{data.product.brand}}</td>
+          <td [attr.data-label]="'Unit'">{{data.selectedQty}}</td>
+          <td [attr.data-label]="'Unit Price'">৳  {{data.product.price}}</td>
+          <td [attr.data-label]="'Price'">৳  {{data.selectedQty*data.product.price}}</td>
+          <td [attr.data-label]="'Action'">
+            <button (click)="addQty(data._id)" mat-mini-fab color="accent" style="margin-left: 4px;">
+              <mat-icon>add</mat-icon>
+            </button>
+            <button (click)="subtractQty(data._id)" mat-mini-fab color="accent" style="margin-left: 4px;">
+              <mat-icon>-</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" style="margin-left: 4px;" (click)="openConfirmDialog(data._id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <h2>
+              Total : {{total}}
+            </h2>
+          </td>
+          <td>
+            <button class="checkout" routerLink="/checkout">Check Out</button>
+          </td>
+        </tr>
+        <!-- End Table Body -->
+  
+      </table>
+  
+    </div>
+  
+    <div class="pagination">
+      <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+  </div>
+  
+  
+  <!-- NO DATA TEMPLATE -->
+  <ng-template #noData>
+    <div style="margin-top: 50px; text-align: center">
+      <h2>No Product Found</h2>
+    </div>
+  </ng-template>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  

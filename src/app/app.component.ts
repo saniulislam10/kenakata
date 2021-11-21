@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import { UserService } from './Service/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(
+    private userService: UserService,
+  ) { 
+    this.userService.autoUserLoggedIn();
+  }
   title = 'Kenakata';
 }

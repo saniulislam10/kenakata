@@ -3,11 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent},
-  {
-    path: 'product', 
-    loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
-  },
+  { 
+    path: '',
+    component: AdminComponent,
+    children:[
+      {
+        path: 'all-products', 
+        loadChildren: () => import('./product/all-product/all-product.module').then(m => m.AllProductModule),
+      },
+      {
+        path: 'add-product', 
+        loadChildren: () => import('./product/add-product/product.module').then(m => m.ProductModule),
+      },
+    ] 
+  }  
 ];
 
 @NgModule({

@@ -1,0 +1,52 @@
+<div class="container-fluid">
+
+  <div class="table-container">
+    <table>
+      <thead>
+      <tr class="table-head">
+        <th scope="col">{{'Name'}}</th>
+        <th scope="col">{{'Category'}}</th>
+        <th scope="col">{{'Price'}}</th>
+        <th scope="col">{{'Brand'}}</th>
+        <th scope="col">{{'Action'}}</th>
+      </tr>
+      </thead> <!-- End Table Head -->
+      <tr
+        *ngFor="let data of products | paginate: { itemsPerPage: 8, currentPage: currentPage}">
+        <td [attr.data-label]="'Name'">{{data.name}}</td>
+        <td [attr.data-label]="'Category'">{{data.category}}</td>
+        <td [attr.data-label]="'Price'">৳ {{data.price}}</td>
+        <td [attr.data-label]="'Brand'">৳ {{data.brand}}</td>
+        <td [attr.data-label]="'Action'">
+          <button [routerLink]="['../', 'add-product', 'edit', data._id]" mat-mini-fab color="accent" style="margin-left: 4px;">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-mini-fab color="warn" style="margin-left: 4px;" (click)="openConfirmDialog(data._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr><!-- End Table Body -->
+
+    </table>
+
+  </div>
+
+  <div class="pagination">
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>
+
+
+<!-- NO DATA TEMPLATE -->
+<ng-template #noData>
+  <div style="margin-top: 50px; text-align: center">
+    <h2>No Product Found</h2>
+  </div>
+</ng-template>
+
+</div>
+
+
+
+
+
+

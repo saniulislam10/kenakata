@@ -1,0 +1,35 @@
+form{
+    margin: auto;
+    border: 1px black solid;
+    padding: 15px;
+}
+.mat-form-field, label{
+    width: 100%;
+    font-size: 20px;
+}
+button{
+    color: white;
+    font-size: 20px;
+    border: none;
+    background-color: #ff9100;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    cursor: pointer;
+}
+button:hover{
+    color: #ff9100;
+    border: 2px solid #ff9100;
+    background-color: white;
+}
+.imageInput{
+    font-size: 20px;
+}
+.productImage{
+    width: 100px;
+    height: 100px;
+}
+.heading{
+    margin-top: 100px;
+}
+/* Footer Section */
+
