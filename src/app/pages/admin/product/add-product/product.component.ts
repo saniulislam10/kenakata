@@ -76,6 +76,7 @@ export class ProductComponent implements OnInit {
       }
     });
 
+
     // Auto Generate Slug
     this.autoGenerateSlug();
   }

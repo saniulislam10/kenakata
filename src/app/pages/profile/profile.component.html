@@ -1,23 +1,27 @@
-<div class="content-area">
-    <div class="view-list">
-      <div class="header">
-        <div class="icon">
-          <mat-icon>format_list_bulleted</mat-icon>
-        </div>
-        <div class="main">
-          <h1 class="title">
-            PERSONAL INFORMATION
-          </h1>
-          <button mat-button (click)="openNewDialog()">Edit</button>
-        </div>
-      </div>
-  
-      <div class="data-view">
-        <table class="data-info-table">
-          <tbody>
+<div class="container">
+  <div class="img-thumb">
+    <img [src]="imgPlaceHolder" [alt]="'Picked Image'">
+    <div class="edit-profile-img">
+      <button mat-icon-button (click)="profileImagePicker.click()">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+    <input [hidden]="true" #profileImagePicker type="file" (change)="fileChangeEvent($event)" accept="image/*"/>
+  </div>
+  <div class="text">
+    <div class="main">
+      <h1 class="title">
+        PERSONAL INFORMATION
+      </h1>
+      <button mat-button (click)="openNewDialog()">Edit Profile</button>
+    </div>
+
+    <div class="data-view">
+      <table class="data-info-table">
+        <tbody>
           <tr class="info-group">
             <td class="label">Full Name</td>
-            <td class="value">{{user?.firstName }}{{user?.lastName}}</td>
+            <td class="value">{{user?.firstName }} {{user?.lastName}}</td>
           </tr>
           <tr class="info-group">
             <td class="label">Phone No</td>
@@ -35,8 +39,8 @@
             <td class="label">Member Since</td>
             <td class="value">{{user?.createdAt | date: 'fullDate'}}</td>
           </tr>
-          </tbody>
-        </table>
-      </div>
+        </tbody>
+      </table>
     </div>
-
+  </div>
+</div>

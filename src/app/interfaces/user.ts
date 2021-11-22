@@ -9,5 +9,6 @@ export interface User {
     password: string,
     username: string,
     createdAt? : any,
-    carts?: string | Cart[];
+    carts?: string | Cart[],
+    profileImg?: string,
 }

@@ -170,7 +170,6 @@ export class UserService {
   }
   
   getUserToken() {
-    console.log("New ",this.token);
     return this.token;
   }
 
