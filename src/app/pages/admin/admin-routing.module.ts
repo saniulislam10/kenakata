@@ -15,6 +15,10 @@ const routes: Routes = [
         path: 'add-product', 
         loadChildren: () => import('./product/add-product/product.module').then(m => m.ProductModule),
       },
+      {
+        path: 'add-image-folder', 
+        loadChildren: () => import('./image-folder/image-folder.module').then(m => m.ImageFolderModule),
+      },
     ] 
   }  
 ];

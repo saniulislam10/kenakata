@@ -154,7 +154,6 @@ export class ProfileComponent implements OnInit {
   }
 
   sendUrl(url: any){
-    console.log(url);
     let user = {
       firstName: this.user.firstName,
       lastName: this.user.lastName,

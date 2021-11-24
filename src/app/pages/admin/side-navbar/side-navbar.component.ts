@@ -24,6 +24,20 @@ const TREE_DATA: SideNavList[] = [
         link: 'add-product'
       }
     ],
+  },
+  {
+    name: 'Gallery',
+    link: 'gallery',
+    children: [
+      {
+        name: 'All folders',
+        link: 'all-folders'
+      },
+      {
+        name: 'Add folder',
+        link: 'add-image-folder'
+      }
+    ],
   }
 ];
 

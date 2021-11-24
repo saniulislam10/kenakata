@@ -5,19 +5,24 @@ import { ProductRoutingModule } from './product-routing.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { ProductComponent } from './product.component';
-import { ImageCropComponent } from '../image-crop/image-crop.component';
+import { UploadImageComponent } from './upload-image/upload-image.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     ProductComponent,
-    ImageCropComponent
+    UploadImageComponent
   ],
   imports: [
     ImageCropperModule,
     CommonModule,
     ProductRoutingModule,
-    MaterialModule
+    MaterialModule,
+    NgxDropzoneModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ProductModule { }

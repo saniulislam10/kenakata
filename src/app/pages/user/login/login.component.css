@@ -23,3 +23,12 @@ button:hover{
     border: 2px solid #ff9100;
     background-color: white;
 }
+.create{
+    color: #004516;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.create:hover{
+    color: #ff9100;
+}
