@@ -6,13 +6,15 @@ import { ProfileComponent } from './profile.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { ImageCropperComponent } from './image-cropper/image-crop.component';
+import { EditProfieComponent } from './edit-profie/edit-profie.component';
 
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
-    ImageCropperComponent
+    ImageCropperComponent,
+    EditProfieComponent
   ],
   imports: [
     CommonModule,

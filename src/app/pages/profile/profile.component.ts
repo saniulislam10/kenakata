@@ -8,6 +8,7 @@ import { ImageCroppedEvent, LoadedImage } from 'ngx-image-cropper';
 import { FileUploadService } from 'src/app/Service/file-upload.service';
 import { FileData } from 'src/app/interfaces/file-data';
 import { ImageCropperComponent } from './image-cropper/image-crop.component';
+import { EditProfieComponent } from './edit-profie/edit-profie.component';
 
 @Component({
   selector: 'app-profile',
@@ -65,12 +66,9 @@ export class ProfileComponent implements OnInit {
   }
 
   openNewDialog() {
-    this.dialog.open(ConfirmDialogComponent, {
-      maxWidth: '400px',
-      data: {
-        title: 'Confirm Delete',
-        message: 'Are you sure you want edit user informations?'
-      }
+    this.dialog.open(EditProfieComponent, {
+      minWidth: '400px',
+      data: this.user
     });
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UiService } from 'src/app/Service/ui.service';
 import { UserService } from 'src/app/Service/user.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class RegistrationComponent implements OnInit {
   
   constructor(
     private fb: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private uiService: UiService
   ) { }
 
   ngOnInit(): void {
@@ -38,6 +40,11 @@ export class RegistrationComponent implements OnInit {
       address: this.dataForm.value.address,
       password: this.dataForm.value.password,
       username: this.dataForm.value.phone
+    }
+
+    if (this.dataForm.value.password !== this.dataForm.value.confirmPassword) {
+      this.uiService.warn('Password and confirm password not matched');
+      return;
     }
 
     console.log(user);

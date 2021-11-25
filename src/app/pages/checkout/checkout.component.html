@@ -1,1 +1,30 @@
-<p>checkout works!</p>
+<p>Name: {{user.firstName}} {{user.lastName}}</p>
+<p>Address: {{user.address}}</p>
+<p>Phone: {{user.phone}}</p>
+<div class="gap"></div>
+<p>Ordered Products : </p>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr class="table-head">
+                <th scope="col">{{'Name'}}</th>
+                <th scope="col">{{'Brand'}}</th>
+                <th scope="col">{{'Unit'}}</th>
+                <th scope="col">{{'Unit Price'}}</th>
+                <th scope="col">{{'Price'}}</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let data of orderItems">
+            <td [attr.data-label]="'Name'">{{data?.product?.name}}</td>
+            <td [attr.data-label]="'Brand'">৳ {{data.product.brand}}</td>
+            <td [attr.data-label]="'Unit'">{{data.selectedQty}}</td>
+            <td [attr.data-label]="'Unit Price'">৳ {{data.product.price}}</td>
+            <td [attr.data-label]="'Price'">৳ {{data.selectedQty*data.product.price}}</td>
+        </tr>
+    </table>
+</div>
+<div class="gap"></div>
+<p>Sub Total: {{subtotal}} Taka</p>
+<p>Shipping Charge: {{shippingCharge}} Taka</p>
+<p>Total: {{total}} Taka</p>
+<button (click)="submitOrder()">Confirm Order</button>

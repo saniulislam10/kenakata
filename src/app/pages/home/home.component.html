@@ -1,11 +1,8 @@
-<div class="gap">
-    <!-- <button routerLink="/admin">Admin</button> -->
-    <div class="cards">
-        <div *ngFor= "let product of products | paginate: { itemsPerPage: 4, currentPage: currentPage }">
-            <app-card [routerLink]="['../','products', product.slug]" class="card" [product]="product" ></app-card>
-        </div>
-        <div class="pagination">
-            <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
-        </div>
+<div class="cards">
+    <div *ngFor="let product of products | paginate: { itemsPerPage: 8, currentPage: currentPage }">
+        <app-card [routerLink]="['../','products', product.slug]" class="card" [product]="product"></app-card>
     </div>
+</div>
+<div class="pagination">
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
 </div>

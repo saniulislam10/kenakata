@@ -1,20 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    --primary-font: 'Roboto', sans-serif;
-    --secondary-font: 'Ubuntu', sans-serif;
-    --bg-color: #F2F2F2;
-    --primary-color: #004516;
-    --secondary-color: #ff9100;
-}
-
 .gap{
-    padding-top: 190px;
+    padding-top: 150px;
     display: block;
     margin: auto;
-    width: 80%;
-}
-
+    width: 90%;
+} 
 footer{
     padding: 20px;
     color: #fff;
@@ -31,7 +20,7 @@ footer a:hover{
 
 
 .max-width{
-    width: 60%;
+    width: 80%;
     margin: auto;
 }
 .header{
@@ -80,7 +69,7 @@ footer a:hover{
 
 /* Search */
 .search-box{
-    width: 100%;
+    width: 60%;
     height: 80px;
 }
 .search{
@@ -96,7 +85,7 @@ footer a:hover{
 }
 
 /* Account */
-.login .active, .login .hide {
+.login a {
     position: absolute;
     right: 10%;
     top: 79px;
@@ -109,23 +98,12 @@ footer a:hover{
 .login a:hover {
     color: var(--secondary-color);
 }
-.login .hide {
-    position: absolute;
-    right: 10%;
-    top: 109px;
-    font-size: 26px;
-    text-decoration: none;
-    color: var(--primary-color);
-    cursor: pointer;
-    transition: 0.3 all ease-in-out;
-}
 
 /* navbar styling */
 .navbar{
     top: 170px;
-    height: 123px;
+    height: 70px;
     display: block;
-    align-items: center;
     position: absolute;
     width: 100%;
     align-items: center;
@@ -134,7 +112,7 @@ footer a:hover{
 }
 .navbar .menu{
     align-items: center;
-    width: 60%;
+    width: 95%;
     margin: auto;
     text-align: center;
 }
@@ -147,7 +125,7 @@ footer a:hover{
     text-align: center;
     color : white;
     display: block;
-    margin-top: 10px;
+    margin-top: 4px;
     padding: 10px 20px;
     text-decoration: none;
     font-family: var(--primary-font);
@@ -157,147 +135,128 @@ footer a:hover{
     color: var(--secondary-color);
 }
 
+.navbar button{
+    display: none;
+    top: 15px;
+    padding: 15px;
+    position: absolute;
+    background: none;
+    right: 0;
+}
+
 
 .main{
     margin: 5%;
 }
 
-/* Banner Section */
-#banner img{
-    display: block;
-    position: relative;
-    width: 58%;
-    height: auto;
-    top: 200px;
-    margin: auto;
-}
 
-/* Products Section */
-#newProducts{
-    margin-top: 50px;
-}
-
-section .titleText{
-    font-family: var(--primary-font);
-    margin: auto;
-    max-width: 57.5%;
-    margin-bottom: 20px;
-    font-size: 26px;
-}
-
-section .max-width{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-
-#products{
-    margin-top: 50px;
-}
-
-/* Feature Section */
-
-#features{
-    margin-top: 220px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#features .feature{
-    margin-right: 10px;
-    width: 120px;
-    height: 120px;
-    border: 2px solid var(--primary-color);
-}
-
-/* Campaign section */
-
-#campaign{
-    width: 58%;
-    height: 100px;
-    margin: auto;
-    margin-top: 30px;
-    border: 2px solid var(--primary-color);
-}
-/* Category section */
-
-#category{
-    width: 58%;
-    height: 250px;
-    margin: auto;
-    margin-top: 30px;
-    border: 2px solid var(--primary-color);
-}
-
-
-
-
-/* none */
 .active{
     display: block;
 }
 
 
 
+/* none */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:1800px) {
-    .navbar .menu{
-        width: 80%;
+@media only screen and (max-width: 750px) {
+    .search-box{
+        width: 60%;
+        height: auto;
     }
-}
-@media screen and (max-width:1350px) {
-    .navbar .menu ul li{
-        font-size: 20px;
+    .login a {
+        position: absolute;
+        right: 5%;
+        top: 59px;
+        font-size: 26px;
     }
     .search{
-        width: 60%;
+        margin-top: 35px;
+        font-size: 15px;
     }
-}
-@media screen and (max-width:1140px) {
-    .navbar .menu{
-        width: 90%;
+    .max-width .logo img{
+        display: block;
+        position: relative;
+        height: 50px;
+        width: auto;
+        cursor: pointer;
     }
-    .navbar .menu ul li{
-        font-size: 20px;
-    }
-}
-@media screen and (max-width:1014px) {
-    /* Need Hamburger Menu */
-    .navbar .menu{
-        width: 100%;
+    .navbar button{
+        display: block;
     }
     .active{
         display: none;
     }
-    .search{
-        width: 100%;
-        font-size: 12px;
+    /* sidebar styling */
+    .navbar .menu{
+        display: none;
     }
-}
+    .navbar button{
+        display: block;
+    }
+    .navbar .menu ul{
+        display: none;
+    }
+    .navbar .menu ul li{
+        display: none;
+    }
+    .navbar .menu ul li a{
+        display: none;
+    }
+    /* sidebar styling */
+    .sidebar{
+        top: 0px;
+        right: 0px;
+        height: 100vh;
+        z-index: 999;
+        width: 30%;
+        display: block;
+        position: fixed;
+        background: #111; 
+    }
+    .sidebar .menu{
+        width: 100%;
+        margin: 0;
+        padding-top: 40px;
+    }
+    .sidebar .menu ul{
+        background-color: none;
+        width: 100%;
+        padding: 0px;
+    }
+    .sidebar .menu ul li{
+        background-color: whitesmoke;
+        list-style: none;
+        display: absolute;
+        font-size: 25px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .sidebar .menu ul li a{
+        position: relative;
+        width: 100%;
+        font-size: 15px;
+        text-align: left;
+        color : black;
+        margin-top: 14px;
+        margin-left: 10px;
+        /* padding: 10px 0px 10px 0px; */
+        text-decoration: none;
+        font-family: var(--primary-font);
+        font-weight: 300;
+    }
+    .sidebar .menu ul li a:hover{
+        color: var(--secondary-color);
+    }
+
+    .sidebar .menu ul button{
+        padding: 15px;
+        position: absolute;
+        background: none;
+        top: 0;
+        right: 0;
+    }
+  }
+
 
 
 

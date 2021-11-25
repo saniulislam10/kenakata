@@ -5,6 +5,8 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { MaterialModule } from '../material/material.module';
+import { SideNavbarComponent } from './admin/side-navbar/side-navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    MaterialModule
   ]
 })
 export class PagesModule { }

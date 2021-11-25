@@ -4,49 +4,49 @@ import {Product} from './product';
 
 export interface OrderItem {
   product: string | Product;
-  deletedProduct?: any;
-  deleteDeliveryStatus?: string;
   price: number;
-  discountType: number;
-  discountAmount?: number;
   quantity: number;
   unitType?: string;
   orderType: string;
+  // deletedProduct?: any;
+  // deleteDeliveryStatus?: string;
+  // discountType: number;
+  // discountAmount?: number;
 }
 
 
 export interface Order {
   _id?: string;
-  orderId?: string;
-  checkoutDate: Date;
-  deliveryDate?: Date;
-  deliveryStatus: number;
+  user?: string | User;
   subTotal: number;
+  checkoutDate?: Date;
   shippingFee: number;
-  discount: number;
   totalAmount: number;
-  totalAmountWithDiscount: number;
-  deletedProduct: boolean;
-  refundAmount: number;
   paymentMethod: string;
   paymentStatus: string;
-  user?: string | User;
   name: string;
   phoneNo: string;
   email: string;
-  alternativePhoneNo?: string;
-  city: string;
-  area: string;
-  postCode: string;
   shippingAddress: string;
-  couponId?: string | any;
-  couponValue?: number;
-  orderTimeline?: OrderTimeline;
-  hasPreorderItem?: boolean;
   orderedItems: OrderItem[];
-  orderNotes?: string;
-  sessionkey?: string;
-  smsTemp?: object;
+  // orderId?: string;
+  // deliveryDate?: Date;
+  // deliveryStatus: number;
+  // discount: number;
+  // totalAmountWithDiscount: number;
+  // deletedProduct: boolean;
+  // refundAmount: number;
+  // alternativePhoneNo?: string;
+  // city: string;
+  // area: string;
+  // postCode: string;
+  // couponId?: string | any;
+  // couponValue?: number;
+  // orderTimeline?: OrderTimeline;
+  // hasPreorderItem?: boolean;
+  // orderNotes?: string;
+  // sessionkey?: string;
+  // smsTemp?: object;
 }
 
 export interface OrderTimeline {

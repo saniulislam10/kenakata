@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
-
+*{
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Ubuntu', sans-serif;
+    --bg-color: #F2F2F2;
+    --primary-color: #004516;
+    --secondary-color: #ff9100;
+}
+.gap{
+    padding-top: 190px;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+button{
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    margin-right: 5px;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+/* button:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+} */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

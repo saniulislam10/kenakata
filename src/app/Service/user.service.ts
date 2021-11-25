@@ -14,6 +14,7 @@ import {ProductService} from './product.service';
 // import auth = firebase.auth;
 // import {BulkSmsService} from './bulk-sms.service';
 import {StorageService} from './storage.service';
+import { ReloadService } from './reload.service';
 
 const API_USER = environment.apiBaseLink + '/api/user/';
 
@@ -35,6 +36,7 @@ export class UserService {
     private router: Router,
     private uiService: UiService,
     private spinner: NgxSpinnerService,
+    private reloadService: ReloadService,
     // private cartService: CartService,
     // private afAuth: AngularFireAuth,
     private storageService: StorageService,
@@ -128,6 +130,8 @@ export class UserService {
     // this.getCarsItemFromLocal();
 
     // Navigate with Auth..
+
+    this.reloadService.needRefreshUser$();
     
     if (redirectFrom) {
       this.router.navigate([redirectFrom]);

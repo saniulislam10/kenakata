@@ -19,26 +19,49 @@
     </div>
 </div>
 <div class="login">
-    <p></p>
-    <a class="btn active" routerLink="{{loginButtonAction}}">{{loginButtonText}}</a>
+    <a class="btn" routerLink="{{loginButtonAction}}">{{loginButtonText}}</a>
 </div>
+
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [mode]="'side'">
+        <button (click)="sidenav.toggle()"><i class="fas fa-bars"></i></button>
+        <div class="sidebar">
+            <div class="menu">
+                <ul>
+                    <button (click)="sidenav.toggle()"><i class="fas fa-bars"></i></button>
+                    <li class=""><a routerLink="men">Mens</a></li>
+                    <li class=""><a routerLink="women">Women</a></li>
+                    <li class=""><a routerLink="/cart">Cart</a></li>
+                    <li class=""><a routerLink="/profile">User profile</a></li>
+                    <li class=""><a routerLink="/admin">Admin Panel</a></li>
+                </ul>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
 
 <div class="navbar">
     <div class="menu">
         <ul>
-            <li class="item"><a routerLink="men">Mens</a></li>
-            <li class="item"><a routerLink="women">Women</a></li>
-            <li class="item"><a routerLink="/cart">Cart</a></li>
-            <li class="item"><a routerLink="/profile">User profile</a></li>
-            <li class="item"><a routerLink="/admin">Admin Panel</a></li>
+            <li><a class="active"routerLink="men">Mens</a></li>
+            <li><a class="active" routerLink="women">Women</a></li>
+            <li><a class="active"routerLink="/cart">Cart</a></li>
+            <li><a class="active" routerLink="/profile">User profile</a></li>
+            <li><a class="active" routerLink="/admin">Admin Panel</a></li>
         </ul>
     </div>
+    <button (click)="sidenav.toggle()"><i class="fas fa-bars"></i></button>
 </div>
-
 <div class="gap">
-    <ng-content></ng-content>
+    <div class="main">
+        <ng-content></ng-content>
+    </div>
 </div>
-
 
 <div class="gap"></div>
 <footer class="footer">

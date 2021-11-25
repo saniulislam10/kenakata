@@ -30,10 +30,6 @@ const TREE_DATA: SideNavList[] = [
     link: 'gallery',
     children: [
       {
-        name: 'All folders',
-        link: 'all-folders'
-      },
-      {
         name: 'Add folder',
         link: 'add-image-folder'
       }
